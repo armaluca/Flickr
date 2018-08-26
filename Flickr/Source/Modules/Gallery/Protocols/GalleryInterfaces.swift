@@ -18,6 +18,7 @@ protocol GalleryViewInterface: ViewInterface {
 }
 
 protocol GalleryPresenterInterface: PresenterInterface {
+    var items: [FlickrPhoto]? { get }
 }
 
 protocol GalleryDataInteractorInterface: InteractorInterface {

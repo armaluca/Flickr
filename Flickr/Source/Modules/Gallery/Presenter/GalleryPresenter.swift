@@ -3,6 +3,8 @@ import UIKit
 final class GalleryPresenter {
 
     // MARK: - Private properties
+    var items: [FlickrPhoto]?
+    
     fileprivate weak var view: GalleryViewInterface?
     fileprivate var dataInteractor: GalleryDataInteractorInterface
     fileprivate var wireframe: GalleryWireframeInterface

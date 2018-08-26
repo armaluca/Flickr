@@ -26,6 +26,8 @@
 		B87838742132AF9A00028DC9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B87838732132AF9A00028DC9 /* Info.plist */; };
 		B87839AF2132BAB300028DC9 /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839AE2132BAB300028DC9 /* GalleryService.swift */; };
 		B87839B92132CC3A00028DC9 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839B82132CC3A00028DC9 /* FlickrPhoto.swift */; };
+		B87839BD2132CDB700028DC9 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839BC2132CDB700028DC9 /* GalleryDataSource.swift */; };
+		B87839BF2132CF5800028DC9 /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839BE2132CF5800028DC9 /* GalleryDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		B87838732132AF9A00028DC9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B87839AE2132BAB300028DC9 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
 		B87839B82132CC3A00028DC9 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		B87839BC2132CDB700028DC9 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
+		B87839BE2132CF5800028DC9 /* GalleryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +326,8 @@
 		B87839B32132CB2B00028DC9 /* DataSource & Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				B87839BC2132CDB700028DC9 /* GalleryDataSource.swift */,
+				B87839BE2132CF5800028DC9 /* GalleryDelegate.swift */,
 			);
 			path = "DataSource & Delegate";
 			sourceTree = "<group>";
@@ -448,6 +454,8 @@
 				B87838632132AB6300028DC9 /* ExternalObjectViewInterfaceType.swift in Sources */,
 				B87838572132AAFF00028DC9 /* GalleryViewController.swift in Sources */,
 				B87838672132AB6300028DC9 /* BaseWireframeInterface.swift in Sources */,
+				B87839BD2132CDB700028DC9 /* GalleryDataSource.swift in Sources */,
+				B87839BF2132CF5800028DC9 /* GalleryDelegate.swift in Sources */,
 				B87838242132AA0800028DC9 /* AppDelegate.swift in Sources */,
 				B87838652132AB6300028DC9 /* ViewInterface.swift in Sources */,
 				B87838642132AB6300028DC9 /* PresenterInterface.swift in Sources */,
