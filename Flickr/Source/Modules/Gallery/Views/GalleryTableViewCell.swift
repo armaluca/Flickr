@@ -20,10 +20,13 @@ class GalleryTableViewCell: UITableViewCell {
 // MARK: - Configurable
 extension GalleryTableViewCell: Configurable {
     func configure(with model: Any?) {
+        
         guard let flickrPhoto = model as? FlickrPhoto else { return }
         
         titleLabel.text = flickrPhoto.title
         authorLabel.text = flickrPhoto.author
+        authorIconView.tintColor = UIColor.random(seed: flickrPhoto.author)
+        
         //TODO: format date, fetch image and randomize author icon color
     }
 }

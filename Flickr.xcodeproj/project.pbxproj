@@ -34,6 +34,7 @@
 		B87839E02133032300028DC9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87839D92133030600028DC9 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B87839E12133032300028DC9 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87839DA2133030600028DC9 /* AlamofireImage.framework */; };
 		B87839E22133032300028DC9 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87839DA2133030600028DC9 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B87839E821330A9B00028DC9 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839E721330A9B00028DC9 /* UIColor+Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		B87839C22132EE2C00028DC9 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		B87839D92133030600028DC9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Flickr/Frameworks/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		B87839DA2133030600028DC9 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Flickr/Frameworks/AlamofireImage.framework; sourceTree = SOURCE_ROOT; };
+		B87839E721330A9B00028DC9 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		B87838222132AA0800028DC9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B87839E621330A6300028DC9 /* Extensions */,
 				B878385A2132AB6300028DC9 /* Protocols */,
 			);
 			path = Shared;
@@ -386,6 +389,14 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		B87839E621330A6300028DC9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B87839E721330A9B00028DC9 /* UIColor+Random.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,6 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87839E821330A9B00028DC9 /* UIColor+Random.swift in Sources */,
 				B87838682132AB6300028DC9 /* InteractorInterface.swift in Sources */,
 				B87838562132AAFF00028DC9 /* GalleryDataInteractor.swift in Sources */,
 				B87839C12132EDF300028DC9 /* GalleryTableViewCell.swift in Sources */,

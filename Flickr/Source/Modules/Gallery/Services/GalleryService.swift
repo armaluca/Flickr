@@ -18,7 +18,7 @@ final class GalleryService: GalleryNetworkingService {
 extension GalleryService {
     struct Constants {
         struct Feed {
-            static let endpoint = "https://api.flickr.com/services/feeds/photos_public?format=json"
+            static let endpoint = "https://api.flickr.com/services/feeds/photos_public.gne?format=json"
         }
     }
 }
