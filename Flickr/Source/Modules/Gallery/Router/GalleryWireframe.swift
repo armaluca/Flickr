@@ -7,7 +7,8 @@ final class GalleryWireframe: BaseWireframe {
 
     // MARK: - Module setup
     func configureModule(with viewController: GalleryViewController) {
-        let dataInteractor = GalleryDataInteractor()
+        let service = GalleryService()
+        let dataInteractor = GalleryDataInteractor(service: service)
         let presenter = GalleryPresenter(wireframe: self, view: viewController, dataInteractor: dataInteractor)
         dataInteractor.delegate = presenter
         viewController.presenter = presenter

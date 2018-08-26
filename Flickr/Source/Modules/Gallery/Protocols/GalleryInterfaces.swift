@@ -1,5 +1,11 @@
 import UIKit
 
+typealias NetworkingCompletion = (NetworkingError?, Any?) -> Void
+
+enum NetworkingError: Error {
+    case failed(message: String)
+}
+
 enum GalleryNavigationOption {
 }
 
@@ -15,4 +21,9 @@ protocol GalleryPresenterInterface: PresenterInterface {
 }
 
 protocol GalleryDataInteractorInterface: InteractorInterface {
+    func fetchModels()
+}
+
+protocol GalleryNetworkingService {
+    func loadFeed(completion: NetworkingCompletion)
 }
