@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.0.0",
+  "iOS" : [
+    {
+      "name" : "RandomColor",
+      "hash" : "edcea46cfb00099030316e193aa74ad1a513689b50f42c38ee39ceb5ade160ee"
+    }
+  ]
+}
