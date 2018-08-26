@@ -1,0 +1,2 @@
+github "Alamofire/AlamofireImage" ~> 3.3
+github "onevcat/RandomColorSwift"
