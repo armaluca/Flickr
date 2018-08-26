@@ -1,1 +1,2 @@
 github "Alamofire/AlamofireImage" ~> 3.3
+github "malcommac/SwiftDate" ~> 5.0
