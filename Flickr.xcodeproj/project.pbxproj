@@ -28,6 +28,8 @@
 		B87839B92132CC3A00028DC9 /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839B82132CC3A00028DC9 /* FlickrPhoto.swift */; };
 		B87839BD2132CDB700028DC9 /* GalleryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839BC2132CDB700028DC9 /* GalleryDataSource.swift */; };
 		B87839BF2132CF5800028DC9 /* GalleryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839BE2132CF5800028DC9 /* GalleryDelegate.swift */; };
+		B87839C12132EDF300028DC9 /* GalleryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839C02132EDF300028DC9 /* GalleryTableViewCell.swift */; };
+		B87839C32132EE2C00028DC9 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839C22132EE2C00028DC9 /* Configurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		B87839B82132CC3A00028DC9 /* FlickrPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
 		B87839BC2132CDB700028DC9 /* GalleryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDataSource.swift; sourceTree = "<group>"; };
 		B87839BE2132CF5800028DC9 /* GalleryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDelegate.swift; sourceTree = "<group>"; };
+		B87839C02132EDF300028DC9 /* GalleryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryTableViewCell.swift; sourceTree = "<group>"; };
+		B87839C22132EE2C00028DC9 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B878384F2132AAFF00028DC9 /* GalleryViewController.swift */,
+				B87839C02132EDF300028DC9 /* GalleryTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				B878385B2132AB6300028DC9 /* Viper */,
+				B87839C22132EE2C00028DC9 /* Configurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 			files = (
 				B87838682132AB6300028DC9 /* InteractorInterface.swift in Sources */,
 				B87838562132AAFF00028DC9 /* GalleryDataInteractor.swift in Sources */,
+				B87839C12132EDF300028DC9 /* GalleryTableViewCell.swift in Sources */,
 				B87838632132AB6300028DC9 /* ExternalObjectViewInterfaceType.swift in Sources */,
 				B87838572132AAFF00028DC9 /* GalleryViewController.swift in Sources */,
 				B87838672132AB6300028DC9 /* BaseWireframeInterface.swift in Sources */,
@@ -465,6 +472,7 @@
 				B87838552132AAFF00028DC9 /* GalleryPresenter.swift in Sources */,
 				B87838692132AB6300028DC9 /* DataInteractorInterface.swift in Sources */,
 				B87839B92132CC3A00028DC9 /* FlickrPhoto.swift in Sources */,
+				B87839C32132EE2C00028DC9 /* Configurable.swift in Sources */,
 				B87838592132AAFF00028DC9 /* GalleryWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

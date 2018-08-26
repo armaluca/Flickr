@@ -21,8 +21,13 @@ class GalleryDataSource: NSObject, UITableViewDataSource, ExternalObjectViewInte
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let model = items?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.flickrCellIdentifier, for: indexPath)
+        
+        if let configurableCell = cell as? Configurable {
+            configurableCell.configure(with: model)
+        }
+        
         return cell
     }
 }
