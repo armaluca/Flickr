@@ -16,11 +16,12 @@ final class GalleryWireframe: BaseWireframe {
 
     // MARK: - Transitions
     func show(with transition: Transition, animated: Bool = true) {
-        guard let moduleViewController = storyboard.instantiateInitialViewController() as? GalleryViewController else {
+        guard let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController,
+            let moduleViewController = navigationController.viewControllers.first as? GalleryViewController else {
             fatalError("Could not instantiate GalleryViewController!")
         }
         configureModule(with: moduleViewController)
-        show(moduleViewController, with: transition, animated: animated)
+        show(navigationController, with: transition, animated: animated)
     }
 }
 
