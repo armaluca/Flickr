@@ -23,9 +23,10 @@ final class GalleryPresenter {
     }
 }
 
-// MARK: - Extensions
+// MARK: - GalleryPresenterInterface
 extension GalleryPresenter: GalleryPresenterInterface {}
 
+// MARK: - DataInteractorDelegateInterface
 extension GalleryPresenter: DataInteractorDelegateInterface {
     func dataInteractorDidFinishFetch(model: Any?) {
         guard let flickrPhotos = model as? [FlickrPhoto] else {
@@ -39,5 +40,4 @@ extension GalleryPresenter: DataInteractorDelegateInterface {
     func dataInteractorDidFinishFetchWithFailure(error: Error) {
         view?.showErrorState(for: error)
     }
-    
 }

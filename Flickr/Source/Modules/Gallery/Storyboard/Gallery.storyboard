@@ -224,9 +224,9 @@
                             <constraint firstItem="7Gm-eE-Sa9" firstAttribute="top" secondItem="YfH-zg-g7A" secondAttribute="top" id="6aI-z9-6pN"/>
                             <constraint firstItem="7Gm-eE-Sa9" firstAttribute="trailing" secondItem="N7r-5Q-f4i" secondAttribute="trailing" id="9fe-m1-nCp"/>
                             <constraint firstItem="mgX-wP-NcZ" firstAttribute="leading" secondItem="N7r-5Q-f4i" secondAttribute="leading" id="Frx-ce-hAK"/>
-                            <constraint firstItem="mgX-wP-NcZ" firstAttribute="bottom" secondItem="N7r-5Q-f4i" secondAttribute="bottom" id="JDK-vM-pz1"/>
+                            <constraint firstItem="mgX-wP-NcZ" firstAttribute="bottom" secondItem="YfH-zg-g7A" secondAttribute="bottom" id="JDK-vM-pz1"/>
                             <constraint firstItem="7Gm-eE-Sa9" firstAttribute="leading" secondItem="N7r-5Q-f4i" secondAttribute="leading" id="VFe-2R-tb3"/>
-                            <constraint firstItem="7Gm-eE-Sa9" firstAttribute="bottom" secondItem="N7r-5Q-f4i" secondAttribute="bottom" id="ggA-Sd-R1B"/>
+                            <constraint firstItem="7Gm-eE-Sa9" firstAttribute="bottom" secondItem="YfH-zg-g7A" secondAttribute="bottom" id="ggA-Sd-R1B"/>
                             <constraint firstItem="mgX-wP-NcZ" firstAttribute="trailing" secondItem="N7r-5Q-f4i" secondAttribute="trailing" id="oYP-Yb-Ctb"/>
                             <constraint firstItem="mgX-wP-NcZ" firstAttribute="top" secondItem="YfH-zg-g7A" secondAttribute="top" id="v9R-dq-8kc"/>
                         </constraints>
