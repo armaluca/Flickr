@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B806B993213347C000A519B8 /* FlickrMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806B992213347C000A519B8 /* FlickrMedia.swift */; };
 		B87838242132AA0800028DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87838232132AA0800028DC9 /* AppDelegate.swift */; };
 		B878382C2132AA1400028DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87838262132AA1400028DC9 /* Assets.xcassets */; };
 		B878382D2132AA1400028DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87838272132AA1400028DC9 /* LaunchScreen.storyboard */; };
@@ -35,6 +36,11 @@
 		B87839E12133032300028DC9 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87839DA2133030600028DC9 /* AlamofireImage.framework */; };
 		B87839E22133032300028DC9 /* AlamofireImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87839DA2133030600028DC9 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B87839E821330A9B00028DC9 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839E721330A9B00028DC9 /* UIColor+Random.swift */; };
+		B87839EA213318FC00028DC9 /* FlickrFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839E9213318FC00028DC9 /* FlickrFeed.swift */; };
+		B87839EC21331B1700028DC9 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87839EB21331B1700028DC9 /* SwiftDate.framework */; };
+		B87839ED21331B2100028DC9 /* SwiftDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87839EB21331B1700028DC9 /* SwiftDate.framework */; };
+		B87839EE21331B2100028DC9 /* SwiftDate.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B87839EB21331B1700028DC9 /* SwiftDate.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B87839F021332EB600028DC9 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87839EF21332EB600028DC9 /* String+Regex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B87839E02133032300028DC9 /* Alamofire.framework in Embed Frameworks */,
+				B87839EE21331B2100028DC9 /* SwiftDate.framework in Embed Frameworks */,
 				B87839E22133032300028DC9 /* AlamofireImage.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -63,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B806B992213347C000A519B8 /* FlickrMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrMedia.swift; sourceTree = "<group>"; };
 		B87837C12132A8E600028DC9 /* Flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87837D52132A8E600028DC9 /* FlickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87838232132AA0800028DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +100,9 @@
 		B87839D92133030600028DC9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Flickr/Frameworks/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		B87839DA2133030600028DC9 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Flickr/Frameworks/AlamofireImage.framework; sourceTree = SOURCE_ROOT; };
 		B87839E721330A9B00028DC9 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		B87839E9213318FC00028DC9 /* FlickrFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFeed.swift; sourceTree = "<group>"; };
+		B87839EB21331B1700028DC9 /* SwiftDate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftDate.framework; path = Carthage/Build/iOS/SwiftDate.framework; sourceTree = SOURCE_ROOT; };
+		B87839EF21332EB600028DC9 /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +111,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B87839DF2133032300028DC9 /* Alamofire.framework in Frameworks */,
+				B87839EC21331B1700028DC9 /* SwiftDate.framework in Frameworks */,
+				B87839ED21331B2100028DC9 /* SwiftDate.framework in Frameworks */,
 				B87839E12133032300028DC9 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				B87839B82132CC3A00028DC9 /* FlickrPhoto.swift */,
+				B87839E9213318FC00028DC9 /* FlickrFeed.swift */,
+				B806B992213347C000A519B8 /* FlickrMedia.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,6 +398,7 @@
 		B87839D8213302F600028DC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B87839EB21331B1700028DC9 /* SwiftDate.framework */,
 				B87839D92133030600028DC9 /* Alamofire.framework */,
 				B87839DA2133030600028DC9 /* AlamofireImage.framework */,
 			);
@@ -393,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				B87839E721330A9B00028DC9 /* UIColor+Random.swift */,
+				B87839EF21332EB600028DC9 /* String+Regex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -502,10 +519,13 @@
 			files = (
 				B87839E821330A9B00028DC9 /* UIColor+Random.swift in Sources */,
 				B87838682132AB6300028DC9 /* InteractorInterface.swift in Sources */,
+				B87839F021332EB600028DC9 /* String+Regex.swift in Sources */,
 				B87838562132AAFF00028DC9 /* GalleryDataInteractor.swift in Sources */,
 				B87839C12132EDF300028DC9 /* GalleryTableViewCell.swift in Sources */,
 				B87838632132AB6300028DC9 /* ExternalObjectViewInterfaceType.swift in Sources */,
 				B87838572132AAFF00028DC9 /* GalleryViewController.swift in Sources */,
+				B806B993213347C000A519B8 /* FlickrMedia.swift in Sources */,
+				B87839EA213318FC00028DC9 /* FlickrFeed.swift in Sources */,
 				B87838672132AB6300028DC9 /* BaseWireframeInterface.swift in Sources */,
 				B87839BD2132CDB700028DC9 /* GalleryDataSource.swift in Sources */,
 				B87839BF2132CF5800028DC9 /* GalleryDelegate.swift in Sources */,
