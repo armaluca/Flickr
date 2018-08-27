@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B806B993213347C000A519B8 /* FlickrMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806B992213347C000A519B8 /* FlickrMedia.swift */; };
+		B806B9952133F8FC00A519B8 /* GalleryStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B806B9942133F8FC00A519B8 /* GalleryStateView.swift */; };
 		B87838242132AA0800028DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87838232132AA0800028DC9 /* AppDelegate.swift */; };
 		B878382C2132AA1400028DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B87838262132AA1400028DC9 /* Assets.xcassets */; };
 		B878382D2132AA1400028DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B87838272132AA1400028DC9 /* LaunchScreen.storyboard */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		B806B992213347C000A519B8 /* FlickrMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrMedia.swift; sourceTree = "<group>"; };
+		B806B9942133F8FC00A519B8 /* GalleryStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryStateView.swift; sourceTree = "<group>"; };
 		B87837C12132A8E600028DC9 /* Flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87837D52132A8E600028DC9 /* FlickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87838232132AA0800028DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				B878384F2132AAFF00028DC9 /* GalleryViewController.swift */,
 				B87839C02132EDF300028DC9 /* GalleryTableViewCell.swift */,
+				B806B9942133F8FC00A519B8 /* GalleryStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				B87838572132AAFF00028DC9 /* GalleryViewController.swift in Sources */,
 				B806B993213347C000A519B8 /* FlickrMedia.swift in Sources */,
 				B87839EA213318FC00028DC9 /* FlickrFeed.swift in Sources */,
+				B806B9952133F8FC00A519B8 /* GalleryStateView.swift in Sources */,
 				B87838672132AB6300028DC9 /* BaseWireframeInterface.swift in Sources */,
 				B87839BD2132CDB700028DC9 /* GalleryDataSource.swift in Sources */,
 				B87839BF2132CF5800028DC9 /* GalleryDelegate.swift in Sources */,
