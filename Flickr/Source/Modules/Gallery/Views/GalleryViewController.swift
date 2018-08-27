@@ -1,10 +1,9 @@
 import UIKit
 
 final class GalleryViewController: UIViewController {
-
-    // MARK: - Public properties
     var presenter: GalleryPresenterInterface!
-
+    @IBOutlet var tableView: UITableView!
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,4 +14,9 @@ final class GalleryViewController: UIViewController {
 
 // MARK: - Extensions
 extension GalleryViewController: GalleryViewInterface {
+    func reload() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
+    }
 }
