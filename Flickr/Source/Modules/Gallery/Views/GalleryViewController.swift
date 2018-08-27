@@ -19,4 +19,6 @@ extension GalleryViewController: GalleryViewInterface {
             self?.tableView.reloadData()
         }
     }
+    func showErrorState(for error: Error) {
+    }
 }

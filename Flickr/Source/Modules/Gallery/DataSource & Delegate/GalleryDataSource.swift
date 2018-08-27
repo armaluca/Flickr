@@ -17,7 +17,7 @@ class GalleryDataSource: NSObject, UITableViewDataSource, ExternalObjectViewInte
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return 2 //items?.count ?? 0
+       return items?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

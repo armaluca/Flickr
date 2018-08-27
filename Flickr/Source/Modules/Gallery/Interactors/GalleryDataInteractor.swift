@@ -10,13 +10,13 @@ final class GalleryDataInteractor: GalleryDataInteractorInterface {
     }
     
     func fetchModels() {
-        service.loadFeed { (error, data) in
+        service.loadFeed { [weak self] (error, data) in
             if let error = error {
-                delegate?.dataInteractorDidFinishFetchWithFailure(error: error)
+                self?.delegate?.dataInteractorDidFinishFetchWithFailure(error: error)
                 return
             }
             
-            delegate?.dataInteractorDidFinishFetch(model: data)
+            self?.delegate?.dataInteractorDidFinishFetch(model: data)
         }
     }
 }

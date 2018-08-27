@@ -1,8 +1,6 @@
 import UIKit
 
 final class GalleryPresenter {
-
-    // MARK: - Private properties
     var items: [FlickrPhoto]?
     
     fileprivate weak var view: GalleryViewInterface?
@@ -15,6 +13,10 @@ final class GalleryPresenter {
         self.view = view
         self.dataInteractor = dataInteractor
     }
+    
+    func viewDidLoad() {
+        dataInteractor.fetchModels()
+    }
 }
 
 // MARK: - Extensions
@@ -22,7 +24,17 @@ extension GalleryPresenter: GalleryPresenterInterface {}
 
 extension GalleryPresenter: DataInteractorDelegateInterface {
     
-    func dataInteractorDidFinishFetch(model: Any?) {}
-    func dataInteractorDidFinishFetchWithFailure(error: Error) {}
+    func dataInteractorDidFinishFetch(model: Any?) {
+        guard let flickrPhotos = model as? [FlickrPhoto] else {
+            return
+        }
+        
+        items = flickrPhotos
+        view?.reload()
+    }
+    
+    func dataInteractorDidFinishFetchWithFailure(error: Error) {
+        view?.showErrorState(for: error)
+    }
     
 }

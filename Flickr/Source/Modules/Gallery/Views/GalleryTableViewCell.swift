@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftDate
+import Alamofire
+import AlamofireImage
 
 class GalleryTableViewCell: UITableViewCell {
     @IBOutlet var authorIconView: UIImageView!
@@ -15,18 +18,29 @@ class GalleryTableViewCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var photoView: UIImageView!
     
+    override func prepareForReuse() {
+        photoView.af_cancelImageRequest()
+        super.prepareForReuse()
+    }
 }
 
 // MARK: - Configurable
 extension GalleryTableViewCell: Configurable {
     func configure(with model: Any?) {
+        guard let model = model as? FlickrPhoto else { return }
         
-        guard let flickrPhoto = model as? FlickrPhoto else { return }
-        
-        titleLabel.text = flickrPhoto.title
-        authorLabel.text = flickrPhoto.author
-        authorIconView.tintColor = UIColor.random(seed: flickrPhoto.author)
-        
-        //TODO: format date, fetch image and randomize author icon color
+        titleLabel.text = model.title
+        authorLabel.text = model.authorFormatted
+        authorIconView.tintColor = model.color
+        dateLabel.text = model.dateFormatted()
+        photoView.af_setImage(withURL: model.media.mobile,
+                              placeholderImage: Constants.placeholder)
+    }
+}
+
+// MARK: - Constants
+extension GalleryTableViewCell {
+    struct Constants {
+        static let placeholder = #imageLiteral(resourceName: "photo_placeholder")
     }
 }

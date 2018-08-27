@@ -12,10 +12,7 @@ class GalleryDelegate: NSObject, UITableViewDelegate, ExternalObjectViewInterfac
     
     @IBOutlet var viewController: GalleryViewController!
     
-}
-
-extension GalleryDelegate {
-    var presenter: GalleryPresenterInterface {
-        return viewController.presenter
+    var items: [FlickrPhoto]? {
+        return viewController.presenter.items
     }
 }
