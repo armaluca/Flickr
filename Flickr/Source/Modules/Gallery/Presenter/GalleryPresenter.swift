@@ -27,7 +27,6 @@ final class GalleryPresenter {
 extension GalleryPresenter: GalleryPresenterInterface {}
 
 extension GalleryPresenter: DataInteractorDelegateInterface {
-    
     func dataInteractorDidFinishFetch(model: Any?) {
         guard let flickrPhotos = model as? [FlickrPhoto] else {
             return

@@ -29,6 +29,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="347.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="btA-19-g5Z">
+                                                    <rect key="frame" x="0.0" y="55" width="375" height="228.5"/>
+                                                </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uz-rR-YMn">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
                                                     <subviews>
@@ -57,9 +60,6 @@
                                                         <constraint firstItem="wEG-1a-scx" firstAttribute="leading" secondItem="JOE-M1-LsF" secondAttribute="trailing" constant="10" id="nNX-bL-ekC"/>
                                                     </constraints>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="btA-19-g5Z">
-                                                    <rect key="frame" x="0.0" y="55" width="375" height="228.5"/>
-                                                </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lw-l2-V7b">
                                                     <rect key="frame" x="0.0" y="283.5" width="375" height="64"/>
                                                     <subviews>
@@ -233,11 +233,6 @@
                         <viewLayoutGuide key="safeArea" id="N7r-5Q-f4i"/>
                     </view>
                     <navigationItem key="navigationItem" id="YnA-Kk-DVf">
-                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Z73-Kk-kKd">
-                            <connections>
-                                <action selector="didPressProfileBarButton:" destination="q1y-dq-p6S" id="eF3-ke-HZW"/>
-                            </connections>
-                        </barButtonItem>
                         <connections>
                             <outlet property="titleView" destination="SSh-2D-T1X" id="0o3-I1-iwz"/>
                         </connections>

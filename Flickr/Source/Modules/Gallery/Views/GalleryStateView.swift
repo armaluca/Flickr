@@ -13,7 +13,9 @@ enum GalleryState {
     case error
 }
 
-final class GalleryStateView: UIView {
+typealias Action = (() -> Void)
+
+class GalleryStateView: UIView {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var primaryLabel: UILabel!
@@ -21,21 +23,28 @@ final class GalleryStateView: UIView {
     @IBOutlet var actionButton: UIButton!
     @IBOutlet var spinner: UIActivityIndicatorView!
 
-    private var action: (() -> Void)?
+    var action: Action?
     
-    func prepare(for state: GalleryState, action: (() -> Void)? = nil) {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        imageView.tintColor = Constants.Theme.pink
+        actionButton.backgroundColor = Constants.Theme.blue
+    }
+    
+    func prepare(for state: GalleryState, action: Action? = nil) {
+        self.action = action
+        
+        prepareLabels(for: state)
         imageView.image = state == .error ? Constants.Content.Error.icon : Constants.Content.Empty.icon
+    }
+    
+    private func prepareLabels(for state: GalleryState) {
         titleLabel.text = state == .error ? Constants.Content.Error.title : Constants.Content.Empty.title
         primaryLabel.text = state == .error ? Constants.Content.Error.primary : Constants.Content.Empty.primary
         secondaryLabel.text = state == .error ? Constants.Content.Error.secondary : Constants.Content.Empty.secondary
         
-        let buttonTitle = state == .error ? Constants.Content.Error.button : Constants.Content.Empty.button
-        
-        imageView.tintColor = Constants.Theme.pink
-        actionButton.isEnabled = true
-        actionButton.setTitle(buttonTitle, for: .normal)
-        actionButton.backgroundColor = Constants.Theme.blue
-        self.action = action
+        let actionButtonTitle = state == .error ? Constants.Content.Error.button : Constants.Content.Empty.button
+        actionButton.setTitle(actionButtonTitle, for: .normal)
     }
     
     @IBAction func didPressActionButton() {

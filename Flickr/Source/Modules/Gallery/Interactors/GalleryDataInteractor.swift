@@ -3,9 +3,9 @@ import Foundation
 final class GalleryDataInteractor: GalleryDataInteractorInterface {
     
     weak var delegate: DataInteractorDelegateInterface?
-    private let service: GalleryService
+    private let service: GalleryNetworkingServiceInterface
     
-    init(service: GalleryService) {
+    init(service: GalleryNetworkingServiceInterface) {
         self.service = service
     }
     

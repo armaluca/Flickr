@@ -8,7 +8,11 @@
 
 import Foundation
 
-final class GalleryService: GalleryNetworkingService {
+enum NetworkError: Error {
+    case generic
+}
+
+final class GalleryService: GalleryNetworkingServiceInterface {
     private let defaultSession: URLSession
     private var dataTask: URLSessionDataTask?
     private var decoder: JSONDecoder {
@@ -44,6 +48,8 @@ final class GalleryService: GalleryNetworkingService {
                     } catch {
                         completion(error, nil)
                     }
+            } else {
+                completion(NetworkError.generic, nil)
             }
         }
         

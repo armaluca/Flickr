@@ -24,6 +24,6 @@ protocol GalleryDataInteractorInterface: InteractorInterface {
     func fetchModels()
 }
 
-protocol GalleryNetworkingService {
+protocol GalleryNetworkingServiceInterface {
     func loadFeed(completion: @escaping NetworkingCompletion)
 }

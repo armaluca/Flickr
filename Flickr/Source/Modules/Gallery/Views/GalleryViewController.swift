@@ -6,7 +6,7 @@ final class GalleryViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var stateView: GalleryStateView!
     
-    private lazy var refreshControl: UIRefreshControl = {
+    var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self,
                                  action: #selector(didPullToRefresh),
@@ -27,10 +27,6 @@ final class GalleryViewController: UIViewController {
     @objc func didPullToRefresh() {
         presenter.load()
         refreshControl.endRefreshing()
-    }
-    
-    @IBAction func didPressProfileBarButton(_ sender: Any) {
-        
     }
 }
 
