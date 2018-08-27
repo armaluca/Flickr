@@ -2,14 +2,35 @@ import UIKit
 
 final class GalleryViewController: UIViewController {
     var presenter: GalleryPresenterInterface!
+    
     @IBOutlet var tableView: UITableView!
     @IBOutlet var stateView: GalleryStateView!
+    
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self,
+                                 action: #selector(didPullToRefresh),
+                                 for: UIControlEvents.valueChanged)
+        return refreshControl
+    }()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        stateView.prepare(for: .empty)
-        presenter.viewDidLoad()
+
+        tableView.addSubview(refreshControl)
+        stateView.prepare(for: .empty) { [weak self] in
+            self?.presenter.load()
+        }
+    }
+    
+    @objc func didPullToRefresh() {
+        presenter.load()
+        refreshControl.endRefreshing()
+    }
+    
+    @IBAction func didPressProfileBarButton(_ sender: Any) {
+        
     }
 }
 
@@ -25,7 +46,7 @@ extension GalleryViewController: GalleryViewInterface {
     func showErrorState(for error: Error) {
         DispatchQueue.main.async { [weak self] in
             self?.stateView.prepare(for: .error) { [weak self] in
-                self?.presenter.viewDidLoad()
+                self?.presenter.load()
             }
             self?.stateView.isHidden = false
         }

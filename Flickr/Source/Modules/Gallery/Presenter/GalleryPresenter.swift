@@ -15,6 +15,10 @@ final class GalleryPresenter {
     }
     
     func viewDidLoad() {
+        load()
+    }
+    
+    func load() {
         dataInteractor.fetchModels()
     }
 }

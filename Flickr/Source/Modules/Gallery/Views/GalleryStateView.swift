@@ -19,6 +19,7 @@ final class GalleryStateView: UIView {
     @IBOutlet var primaryLabel: UILabel!
     @IBOutlet var secondaryLabel: UILabel!
     @IBOutlet var actionButton: UIButton!
+    @IBOutlet var spinner: UIActivityIndicatorView!
 
     private var action: (() -> Void)?
     
@@ -28,11 +29,19 @@ final class GalleryStateView: UIView {
         primaryLabel.text = state == .error ? Constants.Content.Error.primary : Constants.Content.Empty.primary
         secondaryLabel.text = state == .error ? Constants.Content.Error.secondary : Constants.Content.Empty.secondary
         
-        actionButton.isHidden = state != .error
+        let buttonTitle = state == .error ? Constants.Content.Error.button : Constants.Content.Empty.button
+        
+        imageView.tintColor = Constants.Theme.pink
+        actionButton.isEnabled = true
+        actionButton.setTitle(buttonTitle, for: .normal)
+        actionButton.backgroundColor = Constants.Theme.blue
         self.action = action
     }
     
     @IBAction func didPressActionButton() {
+        spinner.startAnimating()
+        actionButton.isEnabled = false
+        actionButton.backgroundColor = Constants.Theme.disabled
         action?()
     }
 }
@@ -40,12 +49,19 @@ final class GalleryStateView: UIView {
 // MARK: - Constants
 extension GalleryStateView {
     struct Constants {
+        struct Theme {
+            static let pink = UIColor(red: 1, green: 0, blue: 132/255, alpha: 1)
+            static let blue = UIColor(red: 0, green: 99/255, blue: 219/255, alpha: 1)
+            static let disabled = UIColor.gray
+        }
+        
         struct Content {
             struct Empty {
                 static let icon = #imageLiteral(resourceName: "empty_state")
                 static let title = "Hello there."
                 static let primary = "The Flickr API provides a public feed that will retrieve the latest twenty photos."
-                static let secondary = "There should be plenty enough to fill the screen."
+                static let secondary = "It should be enough to fill the screen."
+                static let button = "Start browsing"
             }
             
             struct Error {
@@ -53,6 +69,7 @@ extension GalleryStateView {
                 static let title = "Damn it."
                 static let primary = "I can't really say for sure what the problem is."
                 static let secondary = "I just know for sure this never would have happened if Steve Jobs was still alive."
+                static let button = "Try again"
             }
         }
     }

@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="q1y-dq-p6S" customClass="GalleryViewController" customModule="Flickr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YfH-zg-g7A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="348" estimatedRowHeight="348" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mgX-wP-NcZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FlickrCell" rowHeight="348" id="xTA-hz-s9M" customClass="GalleryTableViewCell" customModule="Flickr" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FlickrCell" rowHeight="348" id="xTA-hz-s9M" customClass="GalleryTableViewCell" customModule="Flickr" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="348"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xTA-hz-s9M" id="aMs-KU-5xV">
@@ -119,10 +119,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gm-eE-Sa9" customClass="GalleryStateView" customModule="Flickr" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3ZF-a8-m3p">
-                                        <rect key="frame" x="67.5" y="194" width="240" height="279.5"/>
+                                        <rect key="frame" x="67.5" y="162" width="240" height="279.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_state" translatesAutoresizingMaskIntoConstraints="NO" id="Gxm-Iw-cb4">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -155,7 +155,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I can't really say for sure what the problem is." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ay-21-MNh">
                                                 <rect key="frame" x="0.0" y="184.5" width="240" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-wA-49y" userLabel="SeparatorView">
@@ -168,33 +168,54 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I just know for sure this never would have happened if Steve Jobs was still alive." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phc-ZR-IeT">
                                                 <rect key="frame" x="0.0" y="225.5" width="240" height="54"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3G-pY-42e">
-                                        <rect key="frame" x="154" y="575" width="67" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3G-pY-42e">
+                                        <rect key="frame" x="30" y="499" width="315" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="uQP-Iz-4lT"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Try again"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didPressActionButton" destination="7Gm-eE-Sa9" eventType="touchUpInside" id="2hR-dN-4kH"/>
                                         </connections>
                                     </button>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="zHA-iT-TAo">
+                                        <rect key="frame" x="305" y="511" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="XRb-Nk-bXk"/>
+                                            <constraint firstAttribute="height" constant="20" id="zet-bk-wXJ"/>
+                                        </constraints>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="u3G-pY-42e" secondAttribute="bottom" constant="60" id="HdZ-aR-XCe"/>
+                                    <constraint firstItem="u3G-pY-42e" firstAttribute="leading" secondItem="7Gm-eE-Sa9" secondAttribute="leading" constant="30" id="OFy-3w-tR6"/>
                                     <constraint firstItem="3ZF-a8-m3p" firstAttribute="centerX" secondItem="7Gm-eE-Sa9" secondAttribute="centerX" id="WHZ-11-7Vi"/>
                                     <constraint firstItem="3ZF-a8-m3p" firstAttribute="centerY" secondItem="7Gm-eE-Sa9" secondAttribute="centerY" priority="250" id="Y6P-IB-E7v"/>
                                     <constraint firstItem="u3G-pY-42e" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3ZF-a8-m3p" secondAttribute="bottom" constant="30" id="cPd-IF-Xis"/>
                                     <constraint firstItem="u3G-pY-42e" firstAttribute="centerX" secondItem="7Gm-eE-Sa9" secondAttribute="centerX" id="gk8-nf-jtZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="u3G-pY-42e" secondAttribute="trailing" constant="30" id="mtH-Ce-Hct"/>
+                                    <constraint firstItem="zHA-iT-TAo" firstAttribute="leading" secondItem="u3G-pY-42e" secondAttribute="trailing" constant="-40" id="vEb-hl-M8T"/>
+                                    <constraint firstItem="zHA-iT-TAo" firstAttribute="top" secondItem="u3G-pY-42e" secondAttribute="bottom" constant="-32" id="y1c-iP-PeA"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="actionButton" destination="u3G-pY-42e" id="WDS-bJ-O1J"/>
                                     <outlet property="imageView" destination="Gxm-Iw-cb4" id="mwI-f3-8of"/>
                                     <outlet property="primaryLabel" destination="8ay-21-MNh" id="POl-lA-FtN"/>
                                     <outlet property="secondaryLabel" destination="phc-ZR-IeT" id="ufw-sC-mem"/>
+                                    <outlet property="spinner" destination="zHA-iT-TAo" id="S3N-mq-Nbc"/>
                                     <outlet property="titleLabel" destination="OcL-KY-46G" id="gLI-mx-6pF"/>
                                 </connections>
                             </view>
@@ -211,13 +232,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N7r-5Q-f4i"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YnA-Kk-DVf"/>
+                    <navigationItem key="navigationItem" id="YnA-Kk-DVf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Z73-Kk-kKd">
+                            <connections>
+                                <action selector="didPressProfileBarButton:" destination="q1y-dq-p6S" id="eF3-ke-HZW"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="titleView" destination="SSh-2D-T1X" id="0o3-I1-iwz"/>
+                        </connections>
+                    </navigationItem>
                     <connections>
                         <outlet property="stateView" destination="7Gm-eE-Sa9" id="Smn-UF-2gD"/>
                         <outlet property="tableView" destination="mgX-wP-NcZ" id="DTs-lk-x0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSt-Vg-NGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" id="SSh-2D-T1X">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <customObject id="gJA-Oe-9uH" customClass="GalleryDataSource" customModule="Flickr" customModuleProvider="target">
                     <connections>
                         <outlet property="viewController" destination="q1y-dq-p6S" id="wEO-p6-2Va"/>
@@ -236,7 +270,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KU6-Dh-zFM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="plE-AS-LAx">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="plE-AS-LAx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -253,6 +288,7 @@
     <resources>
         <image name="author_icon" width="36" height="36"/>
         <image name="empty_state" width="149" height="149"/>
+        <image name="logo" width="173" height="72"/>
         <image name="photo_placeholder" width="230" height="230"/>
     </resources>
 </document>
