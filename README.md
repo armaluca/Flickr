@@ -45,8 +45,10 @@ JSON feed documentation: https://www.flickr.com/services/api/response.json.html
 
 ## Frameworks used
 
-- [Alamofire](https://github.com/Alamofire/AlamofireImage)
+- [Alamofire](https://github.com/Alamofire/AlamofireImage) 
 - [SwiftDate](https://github.com/malcommac/SwiftDate) 
+
+The frameworks I have used are not necessary and only used as an exercise to integrate Carthage.
 
 ## Meta
 
