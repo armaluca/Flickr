@@ -43,7 +43,7 @@ We would like you to implement an image gallery application (iOS or Android) tha
 
 JSON feed documentation: https://www.flickr.com/services/api/response.json.html
 
-# Frameworks used
+## Frameworks used
 
 - [Alamofire](https://github.com/Alamofire/AlamofireImage)
 - [SwiftDate](https://github.com/malcommac/SwiftDate) 
