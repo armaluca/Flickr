@@ -36,20 +36,23 @@ final class GalleryService: GalleryNetworkingServiceInterface {
         dataTask = defaultSession.dataTask(with: url) { [weak self] data, response, error in
             defer { self?.dataTask = nil }
             
-            if let error = error {
-               completion(error, nil)
-               return
-            } else if let data = data,
+            guard error == nil else {
+                completion(error, nil)
+                return
+            }
+            
+            guard let data = data,
                 let response = response as? HTTPURLResponse,
-                response.statusCode == 200 {
-                    do {
-                        let feed = try self?.decoder.decode(FlickrFeed.self, from: data)
-                        completion(nil, feed?.items)
-                    } catch {
-                        completion(error, nil)
-                    }
-            } else {
-                completion(NetworkError.generic, nil)
+                response.statusCode == 200 else {
+                    completion(NetworkError.generic, nil)
+                    return
+            }
+            
+            do {
+                let feed = try self?.decoder.decode(FlickrFeed.self, from: data)
+                completion(nil, feed?.items)
+            } catch {
+                completion(error, nil)
             }
         }
         

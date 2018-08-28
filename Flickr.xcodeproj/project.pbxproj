@@ -191,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				B87838232132AA0800028DC9 /* AppDelegate.swift */,
+				B878385A2132AB6300028DC9 /* Protocols */,
 				B87838222132AA0800028DC9 /* Shared */,
 				B87838462132AAFF00028DC9 /* Modules */,
 			);
@@ -201,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				B87839E621330A6300028DC9 /* Extensions */,
-				B878385A2132AB6300028DC9 /* Protocols */,
 			);
 			path = Shared;
 			sourceTree = "<group>";

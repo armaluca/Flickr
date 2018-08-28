@@ -29,6 +29,7 @@ final class GalleryWireframe: BaseWireframe {
 extension GalleryWireframe: GalleryWireframeInterface {
 
     func navigate(to option: GalleryNavigationOption) {
+        // navigation to detail screen
     }
 }
 
