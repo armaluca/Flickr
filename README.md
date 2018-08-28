@@ -21,7 +21,7 @@ We would like you to implement an image gallery application (iOS or Android) tha
 
 ## To-Dos
 
-- [ ]  Unit tests needs to be finished and reinforced
+- [ ]  Unit tests nearly finished for the Gallery module. Few left to do due to time constraints
 - [ ]  Documentation
 
 ## Requirements
@@ -42,6 +42,11 @@ We would like you to implement an image gallery application (iOS or Android) tha
 ## References
 
 JSON feed documentation: https://www.flickr.com/services/api/response.json.html
+
+# Frameworks used
+
+- [Alamofire](https://github.com/Alamofire/AlamofireImage)
+- [SwiftDate](https://github.com/malcommac/SwiftDate) 
 
 ## Meta
 
