@@ -28,7 +28,6 @@ class GalleryStateView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         imageView.tintColor = Constants.Theme.pink
-        actionButton.backgroundColor = Constants.Theme.blue
     }
     
     func prepare(for state: GalleryState, action: Action? = nil) {
@@ -36,6 +35,10 @@ class GalleryStateView: UIView {
         
         prepareLabels(for: state)
         imageView.image = state == .error ? Constants.Content.Error.icon : Constants.Content.Empty.icon
+        
+        actionButton.backgroundColor = Constants.Theme.blue
+        actionButton.isEnabled = true
+        spinner.stopAnimating()
     }
     
     private func prepareLabels(for state: GalleryState) {

@@ -37,11 +37,6 @@ class GalleryStateViewTests: XCTestCase {
         XCTAssertEqual(subject.imageView.tintColor, GalleryStateView.Constants.Theme.pink)
     }
     
-    func testAwakeFromNibSetsBgColorToButton() {
-        subject.awakeFromNib()
-    XCTAssertEqual(subject.actionButton.backgroundColor, GalleryStateView.Constants.Theme.blue)
-    }
-    
     func testPrepareLabelsForEmptyState() {
         subject.prepare(for: .empty)
         
@@ -77,6 +72,14 @@ class GalleryStateViewTests: XCTestCase {
         XCTAssertEqual(subject.primaryLabel.text, GalleryStateView.Constants.Content.Error.primary)
         XCTAssertEqual(subject.secondaryLabel.text, GalleryStateView.Constants.Content.Error.secondary)
         XCTAssertEqual(subject.actionButton.title(for: .normal), GalleryStateView.Constants.Content.Error.button)
+    }
+    
+    func testPrepareIsResettingStates() {
+        subject.prepare(for: .empty)
+        
+        XCTAssertEqual(subject.actionButton.backgroundColor, GalleryStateView.Constants.Theme.blue)
+        XCTAssertTrue(mockSpinner.isStopAnimatingCalled)
+        XCTAssertTrue(subject.actionButton.isEnabled)
     }
     
     func testPrepareImageForErrorState() {
@@ -128,7 +131,12 @@ class GalleryStateViewTests: XCTestCase {
 
 class MockActivityIndicatorView: UIActivityIndicatorView {
     var isStartAnimatingCalled = false
+    var isStopAnimatingCalled = false
     override func startAnimating() {
         isStartAnimatingCalled = true
+    }
+    
+    override func stopAnimating() {
+        isStopAnimatingCalled = true
     }
 }
