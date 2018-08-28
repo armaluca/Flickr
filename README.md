@@ -9,7 +9,7 @@
 
 We would like you to implement an image gallery application (iOS or Android) that uses the public image Flickr feed as a data source.
 
-![](Screenshot.png)
+![](screenshots.png)
 
 ## Features
 
