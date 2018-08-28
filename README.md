@@ -16,6 +16,8 @@ We would like you to implement an image gallery application (iOS or Android) tha
 - [x]  Gallery with async image loading and metadata informations 
 - [x]  Pull-to-refresh
 - [x]  Empty state
+- [x]  Viper architecture
+- [x]  Modular approach
 
 ## To-Dos
 
